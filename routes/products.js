@@ -81,9 +81,10 @@ class Product{
 
 let myProducts = []
 myProducts.push(
-    new Product(1,'Helmet',3.99,'M','/images/helmet.png'),
-    new Product(2,'Bat',75.99,'34"','/images/bat.png'),
-    new Product(3,'Glove',35.00,'M','/images/glove.png')
+    new Product(1,'Helmet',3.99,'M','/images/helmet.jfif'),
+    new Product(2,'Bat',75.99,'34"','/images/bat.jfif'),
+    new Product(3,'Glove',35.00,'M','/images/glove.jfif'),
+    new Product(4,'Baseball',12.99,'M','/images/baseball.jfif')
 )
 
 module.exports = router;
