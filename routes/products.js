@@ -60,7 +60,17 @@ router.post('/product-edit/:id', upload.single('imageUpload'), (req,res,next)=>{
     productToEdit.image_path = imgPath;
 
     res.redirect('/products')
-});
+})
+
+router.get('/product-delete/:id', (req,res,next)=>{
+    
+    //find product in array
+    let prodId = req.params.id | 0;
+    myProducts.splice(myProducts.findIndex(product=> product.id === prodId), 1);
+    
+
+    res.redirect('/products')
+})
 
 //Product details page
 router.get('/:id',function(req, res, next) {
@@ -83,8 +93,7 @@ let myProducts = []
 myProducts.push(
     new Product(1,'Helmet',3.99,'M','/images/helmet.jfif'),
     new Product(2,'Bat',75.99,'34"','/images/bat.jfif'),
-    new Product(3,'Glove',35.00,'M','/images/glove.jfif'),
-    new Product(4,'Baseball',12.99,'M','/images/baseball.jfif')
+    new Product(3,'Glove',35.00,'M','/images/glove.jfif')
 )
 
 module.exports = router;
