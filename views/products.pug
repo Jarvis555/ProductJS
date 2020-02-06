@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    h1 My Products
+    h1 Inventory
     p
         a(href='/') Home
     p 
@@ -10,3 +10,5 @@ block content
         each product in products
             li 
                 a(href='/products/'+product.id) #{product.name}
+            p
+                img.image(src=product.image_path width='100px' height='100px') 
