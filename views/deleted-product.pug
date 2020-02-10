@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= product.name
+    p $ #{product.price}
+    p size: #{product.size}
+
+    h1 Product has been deleted
+    p   
+        a(href='/products') Products
